@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.landing-container
+{
+  width: 100%;
+  height: 30vh;
+}
+
+.landing {
+  width: 100%;
+  height: 30vh;
+  background-image: url(landing_background.jpg);
+  background-size: cover;
+  background-position:center center;
+  z-index: 2;
+}
+.landing.fixed
+{
+  position: fixed;
+  -webkit-box-shadow: 0px 7px 43px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 7px 43px -10px rgba(0,0,0,0.75);
+  box-shadow: 0px 7px 43px -10px rgba(0,0,0,0.75);
+}
+
+.landing .navigation-bar
+{
+  width: 100%;
+  position: fixed;
+  top:0;
+}
+
+.landing .navigation-bar .nav-element
+{
+  font-weight: 700;
+  float: right;
+  padding: 15px 30px;
+  display: inline-block;
+  z-index: 3;
+}
+.landing .navigation-bar .nav-element
+{
+  float: right;
+  padding: 15px 30px;
+  display: inline-block;
+  z-index: 3;
+}
+
+.landing .navigation-bar .nav-element a
+{
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.landing .navigation-bar .nav-element a:hover
+{
+  cursor: pointer;
+  color:azure;
+}
+
+
+.post-card
+{
+  display: inline-block;
+}
+
+.post-card .parallax-canvas
+{
+  margin:40px;
+  width: 490px;
+  height: 285px;
+  position:relative;
+  overflow: hidden;
+  transition: all 0.1s linear;
+}
+
+.post-card .parallax-layer
+{
+  width: 490px;
+  height: 550px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.post-card .parallax-canvas h1
+{
+  position: absolute;
+  width: 270px;
+  left: 20px;
+  bottom: 20px;
+  font-size: 30px;
+  color:white;
+  display:inline;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  z-index: 1;
+}
+.post-card .image-title-spacer
+{
+  height:225px;
+  width: 300px;
+}
+
+.post-card>div:hover
+{
+  cursor:pointer;
+  -webkit-box-shadow: 0px 0px 57px -4px rgba(0,0,0,0.63);
+  -moz-box-shadow: 0px 0px 57px -4px rgba(0,0,0,0.63);
+  box-shadow: 0px 0px 57px -4px rgba(0,0,0,0.63);
+}
+
+.feed-container
+{
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.videos .post-card h1
+{
+  font-size: 10px;
+  color:black;
+  display:inline;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  z-index: 1;
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  .feed-container
+  {
+    width: auto;
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .post-card {
+    width: 100%;
+  }
+
+  .post-card .parallax-canvas
+  {
+    margin:15px 0;
+    width: 100%;
+    height: 285px;
+  }
+  .post-card .parallax-layer
+  {
+    width: 100%;
+  }
+  .post-card>div:hover
+  {
+    cursor:pointer;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .feed-container
+  {
+    width: 768px;
+    margin:0 auto;
+  }
+  .post-card {
+    width: auto;
+  }
+
+  .post-card .parallax-canvas
+  {
+    width: 304px;
+    height: 285px;
+  }
+  .post-card .parallax-layer
+  {
+    width: 100%;
+  }
+}
+
+/* Small Monitor */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .feed-container
+  {
+    width: 960px;
+    margin:0 auto;
+  }
+  .post-card .parallax-canvas
+  {
+    width: 400px;
+  }
+}
+
+/* Large Monitor */
+@media only screen and (min-width: 1200px) {
+  .feed-container
+  {
+    width: 1140px;
+    margin:0 auto;
+  }
+}
